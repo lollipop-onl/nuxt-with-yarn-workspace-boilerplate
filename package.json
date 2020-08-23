@@ -1,0 +1,7 @@
+{
+  "name": "nuxt-with-yarn-workspace-boilerplate",
+  "private": true,
+  "workspaces": [
+    "website/*"
+  ]
+}

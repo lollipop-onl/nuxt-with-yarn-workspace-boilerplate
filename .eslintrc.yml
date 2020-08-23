@@ -1,0 +1,36 @@
+extends:
+  - '@nuxtjs/eslint-config-typescript'
+  - plugin:prettier/recommended
+  - prettier/@typescript-eslint
+rules:
+  camelcase:
+    - error
+    - properties: always
+      ignoreDestructuring: true
+  no-useless-constructor: 'off'
+  require-await: 'off'
+  no-unused-vars: 'off'
+  '@typescript-eslint/no-unused-vars':
+    - warn
+    - args: after-used
+  '@typescript-eslint/no-inferrable-types': warn
+  '@typescript-eslint/consistent-type-definitions':
+    - error
+    - type
+  prettier/prettier:
+    - error
+    - semi: true
+      singleQuote: true
+      printWidth: 120
+      trailingComma: es5
+      arrowParens: always
+      overrides:
+        - files: '*.tsx?'
+          options:
+            parser: 'typescript'
+  import/named: 'off'
+  import/order: 'off'
+overrides:
+  - files: ['*.vue']
+    rules:
+      class-methods-use-this: 'off'
